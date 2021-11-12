@@ -1,0 +1,64 @@
+body {
+    background-color: azure;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+#todo {
+    width: 100%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+#todo button {
+    height: 20px;
+    background-color: blue;
+    height: 50px;
+    color: white;
+    border-radius: 25px;
+    padding: 5px 8px;
+    font-size: 22px;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+#todo input {
+    border-radius: 20px;
+    height: 25px;
+    padding: 5px;
+    font-size: 22px;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+.done {
+    text-decoration: line-through;
+
+}
+
+ul {
+    width: 30%;
+    text-align: left;
+    margin: 50px auto;
+}
+
+ul li {
+    font-size: 28px;
+}
+
+ul li:hover span{
+    visibility: visible;
+    opacity: 1;
+}
+
+li span {
+    display: inline-block;
+    cursor: pointer;
+    margin: 0 5px;
+    visibility: hidden; 
+    opacity: 0; 
+    transition: visibility 0s, opacity 0.7s linear;  
+
+}
+ 
+li div {
+    display: inline-block;
+    text-decoration: none;
+}
