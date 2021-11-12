@@ -1,10 +1,11 @@
 var app = new Vue ({
     el: '#todo',
     data : {
+        newItem: {text :'' , done : false},
         items : [
             {
                 text: 'fare la spesa',
-                done : false
+                done : true
             },
             {
                 text: 'portare il gatto dal veterinario',
@@ -12,7 +13,7 @@ var app = new Vue ({
             },
             {
                 text: 'pulire il bagno',
-                done : false
+                done : true
             } ,   
             {
                 text: 'allenarsi',
@@ -24,6 +25,16 @@ var app = new Vue ({
             },    
           
         ],
+        
+    },
+    methods: {
+        removeItem(index) {
+            this.items.splice(index, 1);
+        },
+        addItem(){
+            this.items.push(this.newItem);
+            this.newItem = {text :'' , done : false};
+        }
     }
 }
 
